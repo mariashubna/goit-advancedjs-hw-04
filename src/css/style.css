@@ -117,3 +117,6 @@ button:focus {
 .is-hidden {
   display: none;
 }
+.container {
+  max-width: 1240px;
+}
