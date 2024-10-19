@@ -36,7 +36,7 @@ p {
 .form input:focus {
   border-color: #4e75ff;
 }
-.form button {
+button {
   width: 90px;
   background-color: #4e75ff;
   border: none;
@@ -46,17 +46,19 @@ p {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
+  cursor: pointer;
 }
-.form button:hover,
-.form button:focus {
+button:hover,
+button:focus {
   background: #6c8cff;
 }
 .gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  width: 1128px;
+  width: 100%;
   margin: 0 auto;
+  justify-content: center;
 }
 .gallery-item {
   box-sizing: border-box;
@@ -66,6 +68,7 @@ p {
   border: 1px solid #808080;
 }
 .gallery-image {
+  width: 100%;
 }
 .gallery-item ul {
   display: flex;
@@ -83,23 +86,35 @@ p {
   font-weight: 600;
   line-height: 1.33;
 }
-.loader {    
-    width: 68px;
-    height: 68px;
-    border: 5px solid #4e75ff;
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
-    display: none;
-    margin: 100px auto 0;
-    }
+.loader {
+  width: 68px;
+  height: 68px;
+  border: 5px solid #4e75ff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  display: none;
+  margin: 100px auto 0;
+}
 
-    @keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-    } 
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.js-load-more {
+  width: 200px;
+  padding: 10px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 30px;
+}
+.is-hidden {
+  display: none;
+}
